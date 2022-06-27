@@ -1,7 +1,4 @@
 steps:
-  - commands: 
-    - "echo Total parallel jobs: $$BUILDKITE_PARALLEL_JOB_COUNT"
-    - "echo This jobs index number: $$BUILDKITE_PARALLEL_JOB"
-    - ".buildkite/tests.sh"
-    label: "Parallel job %n"
+  - command: ".buildkite/tests.sh"
+    label: "Parallelized test"
     parallelism: 5
