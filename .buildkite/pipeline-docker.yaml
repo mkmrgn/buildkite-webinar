@@ -1,7 +1,10 @@
 steps:
-  - command: "ls -lah && pwd && .buildkite/tests.sh"
+  - command: ".buildkite/tests.sh"
     label: "Parallelized test"
     parallelism: 5
     plugins:
       - docker#v3.13.0:
           image: "ubuntu:latest"
+          environment:
+            - "BUILDKITE_PARALLEL_JOB"
+            - "BUILDKITE_PARALLEL_JOB_COUNT"
