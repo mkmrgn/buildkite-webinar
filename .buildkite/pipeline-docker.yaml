@@ -1,5 +1,5 @@
 steps:
-  - command: "ls && pwd && .buildkite/tests.sh"
+  - command: "ls -lah && pwd && .buildkite/tests.sh"
     label: "Parallelized test"
     parallelism: 5
     plugins:
