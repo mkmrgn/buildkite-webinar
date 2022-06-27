@@ -1,0 +1,7 @@
+steps:
+  - command: ".buildkite/tests.sh"
+    label: "Parallelized test"
+    parallelism: 5
+    plugins:
+      - docker#v3.13.0:
+          image: "alpine:latest"
