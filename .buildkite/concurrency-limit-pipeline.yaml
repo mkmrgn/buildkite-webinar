@@ -1,0 +1,8 @@
+steps:
+  - command: "echo 'This is job $$BUILDKITE_PARALLEL_JOB'"
+    label: "Job %n"
+    parallelism: 5
+    concurrency: 1
+    concurrency_group: example
+    agents:
+      queue: "aws"

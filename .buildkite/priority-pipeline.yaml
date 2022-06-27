@@ -1,0 +1,9 @@
+steps:
+  - command: "echo 'This will be processed 2nd'"
+    priority: 0
+
+  - command: "echo 'This will be processed 3rd'"
+    priority: -1
+
+  - command: "echo 'This will be processed 1st'"
+    priority: 1
