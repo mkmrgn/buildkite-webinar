@@ -4,4 +4,4 @@ steps:
     parallelism: 5
     plugins:
       - docker#v3.13.0:
-          image: "alpine:latest"
+          image: "ubuntu:latest"
